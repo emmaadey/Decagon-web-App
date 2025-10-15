@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decagon</title>
+      <link href="./src/output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-white flex flex-col min-h-screen"> 
+    <!-- Header -->
+  <header class="bg-white border-b border-[#E5E5E5]">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+        <img src="img files/Logo.png" alt="Decagon Logo"> 
+        <a href="#"class="bg-gradient-to-r from-[#B8D344] to-[#34A853] hover:from-[#A8C034] hover:to-[#2C8E46] text-white px-4 py-3 rounded-sm text-sm font-medium transition-all duration-300">
+  Apply to become a decadev
+</a>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <main class="flex flex-1 flex-col justify-center items-center px-6 py-12">
+      <h2 class="text-center text-4xl font-semibold text-[#212529] mb-6">Log in to your account</h2>
+
+      <form class="space-y-5">
+        <!-- Email -->
+        <div class="bg-[#F6F7F9] w-[360px] rounded-sm">
+          <label class="block text-sm font-medium text-gray-700">Email address</label>
+          <input type="email" placeholder="Type your email" 
+            class="mt-1 w-full px-3 py-2 border-none outline-none">
+        </div>
+
+        <!-- Password -->
+        <div class="bg-[#F6F7F9] w-[360px] rounded-sm">
+          <label class="block text-sm font-medium text-[#2D2F48]-700">Password</label>
+          <div class="relative mt-1">
+            <input type="password" placeholder="Type your password"
+              class="mt-1 px-3 py-2 border-none outline-none">
+            <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+              <i class="fa-solid fa-eye-slash"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Options -->
+        <div class="flex justify-between items-center ">
+          <label class="items-center">
+            <input type="checkbox" class="text-green-600 focus:ring-green-500 border-gray-300 rounded">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="text-black hover:text-[#34A853] hover:underline">Resend Verification Link</a>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="w-full bg-gradient-to-r from-[#B8D344] to-[#34A853] hover:from-[#A8C034] hover:to-[#2C8E46] text-white font-medium px-4 py-3 transition-all duration-300"> 
+          Log me in
+        </button>
+
+        <!-- Forgot password -->
+        <div class="text-center mt-">
+      <p class="text-sm text-gray-600">
+        Forgot your password?
+      <a href="#" class="text-[#2D2F48] font-semibold hover:text-[#34A853] hover:underline">Reset it here</a>
+    </p>
+        </div>
+      </form>
+  </main>
+
+  <!-- Register -->
+  <footer class=" flex justify-center bg-white border-b border-[#E5E5E5] "> 
+    <p class="text-sm text-gray-600 mt-6">
+      Don't have an account? Get started to
+      <a href="#" class="text-[#2D2F48] font-semibold hover:text-[#34A853] hover:underline">Register to become a decadev</a>
+    </p>
+  </footer>
+
+</body>
+</html>
