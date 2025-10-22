@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <aside class="w-[20%] bg-white border-r px-6 py-8">
+  <img src="img files/Logo.png" alt="Decagon Logo" class="mb-6 w-32" />
+  
+  <h2 class="text-gray-700 font-semibold text-sm mb-4">START APPLICATION</h2>
+  
+  <ul class="space-y-4 text-sm">
+    <li class="flex items-center gap-2 text-[#2D2F48] hover:text-[#B8D344] font-medium">
+      <span>   
+        <button type="button" class=" inset-y-0 right-3">
+<i class="fa-solid fa-circle-chevron-right"></i>           
+ </button></span>
+      Personal Information
+    </li>
+    
+    <li class="flex items-center gap-2 text-[#2D2F48] hover:text-[#B8D344] ">
+      <span> 
+      <button type="button" class=" inset-y-0 right-3">
+<i class="fa-solid fa-circle-chevron-right"></i>           
+ </button>
+</span>
+      Education & Others
+    </li>
+  </ul>
+</aside>
+
+<main class="w-[55%] bg-white px-10 py-8">
+  <h1 class="text-lg font-semibold text-gray-800 mb-1">Tell us about yourself</h1>
+  <p class="text-sm text-gray-500 mb-6">
+    Get better matches by adding your personal details.
+  </p>
+
+  <form id="personal-form" class="space-y-5">
+    
+    <!-- Row 1 -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-[#F6F7F9] rounded-sm p-2">
+        <label class="block text-sm text-gray-600">What is your first name?</label>
+        <input type="text" placeholder="Type your first name"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      </div>
+
+      <div class="bg-[#F6F7F9] rounded-sm p-2">
+        <label class="block text-sm text-gray-600">What is your last name?</label>
+        <input type="text" placeholder="Type your last name"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      </div>
+    </div>
+
+    <!-- Row 2: Email fields -->
+    <div class="bg-[#F6F7F9] rounded-sm p-2">
+      <label class="block text-sm text-gray-600">What is your email address?</label>
+      <input type="email" placeholder="Type your email" class="w-full bg-transparent outline-none py-1 text-sm">
+    </div>
+
+    <div class="bg-[#F6F7F9] rounded-sm p-2">
+      <label class="block text-sm text-gray-600">Confirm your email address</label>
+      <input type="email" placeholder="Confirm your email" class="w-full bg-transparent outline-none py-1 text-sm">
+    </div>
+
+    <!-- Row 3: Passwords -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">Password</label>
+        <input type="password" placeholder="Type your password" class="w-full bg-transparent outline-none py-1 text-sm">
+       <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+             <i class="fa-solid fa-eye-slash"></i>
+            </button>
+      </div>
+
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">Confirm Password</label>
+        <input type="password" placeholder="Type your password again" class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+             <i class="fa-solid fa-eye-slash"></i>
+            </button>
+      </div>
+
+      <!-- GENDER -->
+       <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">What is your gender?</label>
+        <input type="gender" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+      </div>
+
+      <!-- DATE OF BIRTH -->
+       <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">What is your date of birth?</label>
+        <input type="date" placeholder="Pick date" class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+      </div>
+    </div>
+
+    <!-- PHONE NUMBER -->
+      <div class="bg-[#F6F7F9] rounded-sm p-2">
+        <label class="block text-sm text-gray-600">What is your phone number?</label>
+        <input type="email" placeholder="Type your email"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      </div>
+
+    <!-- STATE OF ORIGIN -->
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">What is your state of origin?</label>
+        <input type="state" placeholder="Select option"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+        </div>
+
+    <!-- LOCATION -->
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">What is your current location</label>
+        <input type="location" placeholder="Select option"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+        </div>
+    
+    
+    <!-- Add other rows here later... -->
+
+    <!-- Button -->
+    <!-- <button type="button" id="next-btn"
+      class="w-full bg-gradient-to-r from-[#B8D344] to-[#34A853] text-white font-medium py-3 rounded-sm hover:opacity-90 transition-all">
+      Next
+    </button> -->
+  </form>
+</main>
+
+<section class="w-[25%] bg-[#F1F8E9] px-8 py-12">
+  <h2 class="text-[#2D2F48]  font-semibold text-lg mb-2">Get started</h2>
+  <p class="text-[#666666] text-sm">
+    We would like to know about you; this would help us understand you better.
+  </p>
+</section>
+
+
+</body>
+</html>
