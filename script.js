@@ -6,8 +6,7 @@ const emailPage = document.getElementById("email-page");
 const homeBtn = document.getElementById("home-btn");
 const resetPage = document.getElementById("reset-page");
 const loginBtn = document.getElementById("login-btn");
-
-
+ 
 //when user clicks reset anchor?
 resetAnchor.addEventListener("click", () => {
     loginPage.classList.add("hidden"); //hide login page
@@ -31,3 +30,4 @@ loginBtn.addEventListener("click", () => {
 resetPage.classList.add("hidden");
 loginPage.classList.remove("hidden");
 });
+ 
