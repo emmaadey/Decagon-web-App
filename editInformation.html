@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./src/output.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<title>Edit Information</title>
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col md:flex-row">
+
+  <!-- SIDEBAR -->
+  <aside class="w-full md:w-[250px] bg-[#FAFAFA] px-6 py-8 flex flex-col">
+    <div class="mb-6">
+      <img src="img files/Logo.png" alt="Decagon logo" class="w-24 md:w-40" />
+    </div>
+
+    <nav class="mb-4">
+      <h2 class="text-[#2D2F48] font-semibold mb-4">START APPLICATION</h2>
+      <ul class="space-y-4 text-base">
+        <li>
+          <a href="#" class="flex items-center text-[#2D2F48] hover:text-[#B8D344] font-medium">
+            <button type="button" aria-hidden="true" class="mr-3">
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+            Personal Information
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center text-[#2D2F48] hover:text-[#B8D344] font-medium">
+            <button type="button" aria-hidden="true" class="mr-3">
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+            Education & Others
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mt-4">
+      <p class="text-sm text-[#666666] max-w-[236px] mb-3">
+        If you would like to make changes to this information, click the button below.
+      </p>
+      <button type="button" class="w-[160px] bg-gradient-to-r from-[#B8D344] to-[#34A853] text-white font-medium py-2 hover:opacity-90 transition">
+        Edit information
+      </button>
+    </div>
+
+    <button href="#" class="mt-6 inline-flex items-center text-[#2D2F48] hover:text-[#34A853]" id="refer-openPopup">
+      <span class="mr-3">
+        <i class="fa-solid fa-envelope"></i>
+      </span>
+      Refer a Friend
+    </button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="flex-1 w-full md:w-3/4 flex flex-col bg-white">
+    <header class="flex justify-between text-[#2D2F48] font-semibold items-center border-b border-[#E5E5E5] px-8 py-4">
+      <!-- Add header content here -->
+      <div></div>
+    </header>
+
+    <!-- ROWS -->
+    <div class="flex flex-1">
+      <!-- MAIN FORM AREA -->
+      <main class="w-full md:w-2/3 mt-6 mb-20 px-4 md:px-8 bg-white">
+
+        <!-- ASSESSMENT CARD -->
+        <div class=" grid-cols-1 md:flex justify-between items-center bg-[#F6F7F9] p-6 mb-6 w-full">
+          <div>
+            <h2 class="text-xl font-semibold text-[#2D2F48] mb-2">Get Assessed</h2>
+            <p class="text-sm text-gray-500 max-w-md">Book your assessment right away to complete your application.</p>
+          </div>
+
+          <div>
+          <button type="button" id="openPopup" class="w-[170px] bg-gradient-to-r from-[#B8D344] to-[#34A853] text-white font-medium py-2  hover:opacity-90 transition">
+            Book Assessment
+          </button>
+          </div>
+        </div>
+
+        <form class="space-y-5 px-2 md:px-10">
+          <div class="border-b border-[#E5E5E5] mb-6"></div>
+
+          <h2 class="text-xl font-semibold text-[#2D2F48] mb-2">Personal Information</h2>
+
+          <!-- Row 1 -->
+          <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-4">
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="first_name" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your first name?</label>
+                <input id="first_name" name="first_name" type="text" placeholder="Type your first name" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="last_name" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your last name?</label>
+                <input id="last_name" name="last_name" type="text" placeholder="Type your last name" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="bg-[#F6F7F9] p-3 mb-4">
+              <label for="email" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your email address?</label>
+              <input id="email" name="email" type="email" placeholder="Type your email" class="w-full bg-transparent outline-none pt-2 text-sm" />
+            </div>
+
+            <div class="bg-[#F6F7F9] p-3 mb-4">
+              <label for="confirm_email" class="block text-sm font-semibold text-[#2D2F48] opacity-90">Confirm your email address</label>
+              <input id="confirm_email" name="confirm_email" type="email" placeholder="Confirm your email" class="w-full bg-transparent outline-none pt-2 text-sm" />
+            </div>
+
+            <!-- Row 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-4">
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="gender" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your gender?</label>
+                <select id="gender" name="gender" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="birth" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your date of birth?</label>
+              <select id="date" name="date" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- PHONE -->
+            <div class="bg-[#F6F7F9] p-3 mb-4">
+              <label for="phone" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your phone number?</label>
+              <input id="phone" name="phone" type="tel" placeholder="Type your phone number" class="w-full bg-transparent outline-none pt-2 text-sm" />
+            </div>
+
+            <!-- STATE + LOCATION -->
+    
+              <div class="bg-[#F6F7F9] p-3 mb-4">
+                <label for="state" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your state of origin?</label>
+                <select id="state" name="state" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select option</option>
+                  <!-- Fill with options -->
+                </select>
+    
+              </div>
+
+              <div class="bg-[#F6F7F9] p-3 ">
+                <label for="location" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your current location?</label>
+                <input id="location" name="location" type="text" placeholder="Type your location" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+          </section>
+
+          <!-- EDUCATION & OTHERS -->
+          <section>
+            <div class="mb-6">
+              <h2 class="text-xl font-semibold text-[#2D2F48] mb-2">Education & others</h2>
+              <p class="text-sm text-gray-500">We would like some more information</p>
+            </div>
+
+            <div class="bg-[#F6F7F9] p-3 mb-4">
+              <label for="qualification" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your highest qualification</label>
+              <select id="qualification" name="qualification" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                <option value="">Select option</option>
+              </select>
+            </div>
+
+            <div class="bg-[#F6F7F9] p-3  mb-4">
+              <label for="graduate" class="block text-sm font-semibold text-[#2D2F48] opacity-90">Where did you graduate from?</label>
+              <select id="graduate" name="graduate" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-4">
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="course" class="block text-sm font-semibold text-[#2D2F48] opacity-90">Course of study</label>
+                <input id="course" name="course" type="text" placeholder="Course of study" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="grade" class="block text-sm font-semibold text-[#2D2F48] opacity-90">Grade achieved</label>
+                <select id="grade" name="grade" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+              </div>
+           <!-- PROGRAMMING EXPERIENCE -->
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="experience" class="block text-sm font-semibold text-[#2D2F48] opacity-90">Programming Experience</label>
+                <select id="experience" name="experience" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+              </div>
+            <!-- NYSC -->
+              <div class="bg-[#F6F7F9] p-3">
+                <label for="status" class="block text-sm font-semibold text-[#2D2F48] opacity-90">NYSC Status</label>
+                <select id="status" name="status" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+              </div>
+            </div>
+
+              <div class="bg-[#F6F7F9] p-3  mb-4">
+              <label for="about_us" class="block text-sm font-semibold text-[#2D2F48] opacity-90">How did you about us?</label>
+               <select id="about_us" name="about_us" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+            </div>
+            <!-- PAYMENT OPTION -->
+              <div class="bg-[#F6F7F9] p-3  mb-4 shadow xs">
+              <label for="Payment" class="block text-sm font-semibold text-[#2D2F48] opacity-90">Payment option</label>
+              <select id="payment" name="payment" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 text-sm pr-8 transition-all">
+                  <option value="">Select option</option>
+                </select>
+            </div>
+          </section>
+        </form>
+      </main>
+
+      <!-- RIGHT ASIDE  -->
+      <aside class="w-full md:w-[480px] bg-white border-l border-[#E5E5E5] overflow-hidden">
+        <div class="bg-[#B1D1451A] p-6">
+          <div class="flex items-center mb-3">
+            <div class="bg-[#B8D344] rounded-full w-10 h-10 flex items-center justify-center">
+              <i class="fa-solid fa-lightbulb text-white text-lg"></i>
+            </div>
+            <h3 class="ml-4 text-[#2D2F48] font-semibold text-lg">All your information in one place</h3>
+          </div>
+          <p class="text-[#666666] text-sm">Your application is being process and you will be notified with any information via your registered email address.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+ 
+  <!-- ASSESSMENT POPUP MODAL -->
+<div class=" top-0 left-0  bg-black/50 flex justify-center items-center fixed inset-0 hidden" id="popup">
+  <div class="bg-white shadow-lg p-8 w-[325px] md:w-[900px]">
+    <h2 class="text-xl font-semibold text-[#2D2F48] mb-2">Book Assessment</h2>
+    <p class="text-sm text-[#666666]">Selected your preferred date, time and location for assessments</p>
+    <div class=" grid-cols-1 md:flex justify-between items-center gap-4 my-6">
+              <div class="bg-[#F6F7F9] w-[259px] p-2">
+                <label for="location" class="block text-sm font-bold text-[#2D2F48] tracking-wide mx-1">Location</label>
+                <select id="location" name="location" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select location</option>
+                  <!-- Fill with options -->
+                </select>
+              </div>
+
+              <div class="bg-[#F6F7F9]  w-[259px] p-2">
+                <label for="date" class="block text-sm text-[#2D2F48] font-bold tracking-wide mx-1">Date</label>
+                <select id="date" name="date" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select date</option>
+                  <!-- Fill with options -->
+                </select>
+              </div>
+
+              <div class="bg-[#F6F7F9]  w-[259px] p-2">
+                <label for="time" class="block text-sm text-[#2D2F48] font-bold tracking-wide mx-1">Time</label>
+                <select id="time" name="time" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select time</option>
+                  <!-- Fill with options -->
+                </select>
+              </div>
+              </div>
+               <div class="flex justify-end gap-6">
+                <button id="closePopup" class="text-[#21334F] font-bold hover:opacity-90">Cancel</button>
+                <button type="button" class="bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white font-medium py-3 px-10 hover:opacity-90 transition-all">
+                  Save
+              </div>
+              
+</div>
+</div>
+
+<!-- REFER A FRIEND POPUP MODAL -->
+<div class="hidden flex justify-center items-center fixed top-0 left-0 bg-black/50 inset-0" id="referPopup">
+  <div class=" bg-white shadow-lg p-8 w-[325px] md:w-[580px]">
+<h2 class="text-xl font-semibold text-[#2D2F48] mb-2">Refer a Friend</h2>
+<p class="text-sm text-[#666666]">You can think of a copy for this.</p>
+  <form action="" class="my-6">
+<div class="grid-cols-1 md:flex justify-between items-center gap-4 mb-4">
+            <!-- FRIEND FIRST NAME -->
+       <div class="bg-[#F6F7F9] py-2 px-4 ">
+                <label for="friend_firstname" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your friend's first name?</label>
+                <input id="friend_firstname" name="friend_firstname" type="text" placeholder="Type their first name" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+          <!-- FRIEND LAST NAME -->
+               <div class="bg-[#F6F7F9] py-2 px-4 ">
+                <label for="friend_lastname" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is your friend's last name?</label>
+                <input id="friend_lastname" name="friend_lastname" type="text" placeholder="Type their last name" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+</div>
+          <!-- FRIEND EMAIL -->
+            <div class="bg-[#F6F7F9] p-3 mb-4">
+              <label for="email" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is the email address?</label>
+              <input id="email" name="email" type="email" placeholder="Type their email" class="w-full bg-transparent outline-none pt-2 text-sm" />
+            </div>
+          <!-- FRIEND PHONE -->
+            <div class="bg-[#F6F7F9] p-3 mb-4">
+              <label for="phone" class="block text-sm font-semibold text-[#2D2F48] opacity-90">What is the phone number?</label>
+              <input id="phone" name="phone" type="tel" placeholder="Type their phone number" class="w-full bg-transparent outline-none pt-2 text-sm" />
+            </div>
+  </form>
+<div class="flex justify-end gap-6">
+                <button id="refer-closePopup" class="text-[#21334F] font-bold hover:opacity-90">Cancel</button>
+                <button type="button" class="bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white font-medium py-3 px-10 hover:opacity-90 transition-all">
+                  Save
+              </div>
+  </div>
+</div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
-.anchor {
-    color: #0000;
-    
+@layer base {
+body{
+    font-family: 'Mulish', sans-serif;
 }
 
+.anchor {
+    color: #0000;
+}
+
+.h2 {
+   color:#2D2F48;
+   font-weight: 200;
+   margin-bottom: 2px;
+}
+
+}

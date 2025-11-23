@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./src/output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body class="min-h-screen bg-gray-100 flex">
 
   <aside class="w-[20%] bg-[#FAFAFA] px-6 py-8 flex flex-col">
-  <img src="img files/Logo.png" alt="Decagon Logo" class="mb-6 w-32" />
+    <div class="mb-6">
+  <img src="img files/Logo.png" alt="Decagon Logo" class=" w-24 md:w-40" />
+  </div>
+  <h2 class="text-[#2D2F48] font-semibold mb-4">START APPLICATION</h2>
   
-  <h2 class="text-gray-700 font-semibold text-sm mb-4">START APPLICATION</h2>
-  
-  <ul class="space-y-4 text-sm">
+  <ul class="space-y-4 text-base">
     <li class="gap-2 text-[#2D2F48] hover:text-[#B8D344] font-medium">
       <span>   
         <button type="button" class=" inset-y-0 right-3">
@@ -43,7 +45,7 @@
       <a>Help</a>
     </header>
 
-<div class="flex flex-1">
+<div class="flex flex-1 hidden">
 
 <main class="w-[55%] bg-white px-10 py-8">
   <h1 class="text-lg font-semibold text-[#2D2F48] mb-1">Tell us about yourself</h1>
@@ -171,6 +173,121 @@
   </div>
 </aside>
  </div>
+
+<!-- EDUCATION & OTHERS -->
+
+<div class="flex flex-1">
+
+<main class="w-[55%] bg-white px-10 py-8 ">
+  <h1 class="text-lg font-semibold text-[#2D2F48] mb-1">Education & Others</h1>
+  <p class="text-sm text-gray-500 mb-6">We would like some more information  </p>
+
+  <form id="personal-form" class="space-y-5 ">
+
+    <!--  Qualification -->
+    <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+      <label class="block text-sm text-gray-600">What is your highest qualification</label>
+      <input type="text" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+     <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+    </div>
+ 
+        <!-- Graduate -->
+
+    <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+      <label class="block text-sm text-gray-600">Where did you graduate from?</label>
+      <input type="text" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+     <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+    </div>
+
+
+    <!-- Row 1: Course of study & Grade-->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-[#F6F7F9] rounded-sm p-2">
+        <label class="block text-sm text-gray-600">Course of study</label>
+        <input type="text" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+      </div>
+
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">Grade achieved</label>
+        <input type="text" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+       <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+      </div>
+
+      <!-- Row 2: Programming Experience & Status -->
+       <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">Programming Experience</label>
+        <input type="text" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+      </div>
+
+      <!-- Status -->
+       <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">NYSC Status</label>
+        <input type="text" placeholder="Select option" class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+      </div>
+    </div>
+
+    <!-- : How did you about us? -->
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">How did you about us?</label>
+        <input type="text"  placeholder="Select option"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+        </div>
+
+    <!-- Row 5: Payment option -->
+      <div class="bg-[#F6F7F9] rounded-sm p-2 relative mt-1">
+        <label class="block text-sm text-gray-600">Payment option</label>
+        <input type="text" placeholder="Select option"
+          class="w-full bg-transparent outline-none py-1 text-sm">
+      <button type="button" class="absolute inset-y-0 right-3 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-caret-down"></i>
+            </button>
+        </div>
+    
+    
+    <!-- Add other rows here later... -->
+
+    <!-- Button -->
+     <div class="flex gap-4 justify-end ">
+      <a href="#" id="next-btn" class=" w-[135px] bg-gradient-to-r from-[#B8D344] to-[#34A853] text-white font-medium py-2 text-center border-none hover:opacity-90 transition-all">
+      Previous
+    </a>
+    <a href="congrats.html" id="next-btn" class=" w-[135px] bg-gradient-to-r from-[#B8D344] to-[#34A853] text-white font-medium py-2 text-center border-none hover:opacity-90 transition-all">
+      Submit
+    </a>
+    </div>
+  </form>
+</main>
+
+<aside class=" bg-white border-s border-[#E5E5E5]">
+  
+    <!-- Top colored section -->
+  <div class="bg-[#B1D1451A] p-10">
+    <div class="flex items-center mb-4">
+      <div class="bg-[#B8D344] rounded-full w-10 h-10 flex items-center justify-center">
+        <i class="fa-solid fa-lightbulb text-white text-lg"></i>
+      </div>
+      <h2 class="ml-5 text-[#2D2F48] font-semibold text-xl">Education and others</h2>
+    </div>
+    <p class="text-[#666666] text-sm ">We would like to know about your educational background.</p>
+  </div>
+</aside>
+ </div>
 </div>
+
 </body>
 </html>

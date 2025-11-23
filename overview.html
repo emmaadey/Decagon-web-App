@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./src/output.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <title>Overview</title>
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col md:flex-row">
+    <!-- SIDEBAR -->
+  <aside class="w-full md:w-[250px] bg-[#FAFAFA] px-6 py-8 flex flex-col">
+    <div class="aside_sidebar">
+        <Img src="img files/Logo.png" class="logo" alt="logo"></Img>
+         <button class="">
+            <i class="fas fa-times"></i>
+         </button>
+    </div>
+      <!-- LINKS -->
+
+      <div>
+    <h3>Menu</h3>
+  
+    <ul class="links">
+        <li>
+            <a href="#dashboard" class="">
+             <button type="button" aria-hidden="true" class="mr-3">
+        <i class="fa-solid fa-table-cells-large"></i>       
+       </button>
+         Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#applicant" class="">
+            <button type="button" aria-hidden="true" class="mr-3"></button>
+            <i class="fa-solid fa-users"></i>
+        </button>
+        Applicant
+        </a>
+        </li>
+
+        <li>
+            <a href="#assessment" class="">
+              <button type="button" aria-hidden="true" class="mr-3">
+             <i class="fa-solid fa-id-card"></i>
+            </button>
+            Assesment
+            </a>
+        </li>
+    </ul>
+</div>
+<div>
+       <h3>Others</h3> 
+       <div>
+        <a href="#settings" class="">
+          <button type="button" aria-hidden="true" class="mr-3">
+          <i class="fa-solid fa-gear"></i>
+          </button>
+            Settings
+        </a>
+      </div>
+       </div>
+  </aside>
+
+    <!-- MAIN CONTENT -->
+  <div class="flex-1 w-full md:w-3/4 flex flex-col bg-white">
+    <header class="flex justify-between text-[#2D2F48] font-semibold items-center border-b border-[#E5E5E5] px-8 py-4">
+<div class="flex gap-4 ">
+  <div class=" bg-[#F6F7F9] px-8 ">
+<input type="text" placeholder="Search for accounts, users..." class="w-400px text-sm text-[#979797] font-light  px-8 py-3  outline-none">
+</div>
+<button type="button" class="bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white font-medium py-2 px-8 hover:opacity-90 transition-all">
+   Search
+ </div>
+
+</header>
+  <main class="mt-6 mb-20 px-4 md:px-8 bg-white">
+<h2>Overview</h2>
+<div class="grid-cols-2 md:flex justify-between gap-6">
+
+<div class=" w-[300px] pr-6 pl-2 bg-[#FFFFFF] rounded-sm">
+  <div class="p-2">
+<h3 class="text-[#21334F]">Total Applicants</h3>
+<p class="font-semibold text-[#2D2F48] text-2xl pt-2">1,230</p>
+</div>
+</div>
+
+<div class="w-[300px] pr-6 pl-2 bg-[#F7FAEC] rounded-sm">
+  <div class="p-2">
+<h3 >Successful</h3>
+<p class="font-semibold text-[#34A853] text-2xl pt-2">390</p>
+</div>
+</div>
+
+<div class="w-[300px] pr-6 pl-2 bg-[#E5E5E5] rounded-sm">
+  <div class="p-2">
+<h3 class="text-[#21334F]">Pending</h3>
+<p class="font-semibold text-[#2D2F48] text-2xl">1,230</p>
+</div>
+</div>
+
+<div class="w-[300px] pr-6 pl-2 bg-[#FFF3F3] rounded-sm">
+  <div class="p-2">
+<h3 class="text-[#21334F]">Declined</h3>
+<p class="font-semibold text-[#D34444] text-2xl">30</p>
+</div>
+</div>
+</div>
+
+
+<section class="">
+
+  <div class="flex justify-between">
+  <h2>Applicants</h2>
+  <p>View All</p>
+</div>
+<table class=""> 
+  <tr class=" ">
+<th>Applicant's Name</th>
+<th>Email address</th>
+<th>Phone Number</th>
+<th>Assessment</th>
+<th>Status</th>
+  </tr>
+</table>
+</section>
+
+  </main>
+  </div>
+</body>
+</html>
