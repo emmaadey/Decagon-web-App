@@ -3,16 +3,36 @@
 @layer base {
 body{
     font-family: 'Mulish', sans-serif;
+    color:#2D2F48;
 }
 
 .anchor {
     color: #0000;
 }
 
-.h2 {
-   color:#2D2F48;
+h2 {
    font-weight: 200;
    margin-bottom: 2px;
 }
 
+.menu {
+    padding: 15px 20px;
+    border-radius: 4px;
+    
 }
+
+.menu:hover,
+.menu:focus,
+.menu:active {
+    color:#FFFFFF;
+    background-color: #34A853;
+}
+
+.pagination-btn:hover,
+.pagination-btn:focus,
+.pagination-btn:active {
+color: #FFFFFF;
+background-color: #34A853; 
+}
+}
+

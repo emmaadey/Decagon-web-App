@@ -9,42 +9,38 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <title>Overview</title>
 </head>
-<body class="min-h-screen bg-gray-100 flex flex-col md:flex-row">
+<body class="min-h-screen bg-[#FAFAFA] flex flex-col md:flex-row">
     <!-- SIDEBAR -->
-  <aside class="w-full md:w-[250px] bg-[#FAFAFA] px-6 py-8 flex flex-col">
+  <aside id="sidebar" class="fixed top-0 left-0  bg-[#FAFAFA] transform -translate-x-full md:translate-x-0 transition-transform duration-300 px-6 py-8 flex flex-col">
     <div class="aside_sidebar">
         <Img src="img files/Logo.png" class="logo" alt="logo"></Img>
-         <button class="">
-            <i class="fas fa-times"></i>
-         </button>
     </div>
       <!-- LINKS -->
 
       <div>
-    <h3>Menu</h3>
-  
-    <ul class="links">
-        <li>
-            <a href="#dashboard" class="">
+    <h3 class="font-semibold text-lg">Menu</h3>
+    <ul class="mb-8 mt-4 space-y-2">
+        <li class="menu">
+            <a href="overview.html" class="">
              <button type="button" aria-hidden="true" class="mr-3">
         <i class="fa-solid fa-table-cells-large"></i>       
-       </button>
+       </button>  
          Dashboard
             </a>
         </li>
 
-        <li>
+        <li class="menu">
             <a href="#applicant" class="">
-            <button type="button" aria-hidden="true" class="mr-3"></button>
+            <button type="button" aria-hidden="true" class="mr-3">
             <i class="fa-solid fa-users"></i>
         </button>
         Applicant
         </a>
-        </li>
+      </li>
 
-        <li>
-            <a href="#assessment" class="">
-              <button type="button" aria-hidden="true" class="mr-3">
+        <li class="menu">
+            <a href="assessment.html" class="">
+              <button type="button" class="mr-3">
              <i class="fa-solid fa-id-card"></i>
             </button>
             Assesment
@@ -53,82 +49,241 @@
     </ul>
 </div>
 <div>
-       <h3>Others</h3> 
-       <div>
+       <h3 class="font-semibold text-lg mb-4">Others</h3> 
+       
         <a href="#settings" class="">
           <button type="button" aria-hidden="true" class="mr-3">
           <i class="fa-solid fa-gear"></i>
           </button>
             Settings
         </a>
-      </div>
        </div>
+
+        <a class="my-20 hover:text-[#34A853] focus:text-[#34A853]" id="refer-openPopup">
+      <span class="mr-3">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>   
+      </span>
+      Logout
+    </a>
   </aside>
 
     <!-- MAIN CONTENT -->
-  <div class="flex-1 w-full md:w-3/4 flex flex-col bg-white">
+  <div id="main-content" class="flex-1 w-full md:ml-[230px] flex flex-col bg-white">
+<!-- HEADER -->
     <header class="flex justify-between text-[#2D2F48] font-semibold items-center border-b border-[#E5E5E5] px-8 py-4">
-<div class="flex gap-4 ">
-  <div class=" bg-[#F6F7F9] px-8 ">
-<input type="text" placeholder="Search for accounts, users..." class="w-400px text-sm text-[#979797] font-light  px-8 py-3  outline-none">
-</div>
-<button type="button" class="bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white font-medium py-2 px-8 hover:opacity-90 transition-all">
-   Search
- </div>
+       <div class="flex gap-4">
+        <div class="flex items-center gap-4 w-full max-w-xl bg-gray-100 pl-4 pr-12 py-4">
+        <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+        <input
+          type="text"
+          placeholder="Search for accounts, users..."
+          class="bg-transparent outline-none w-full text-sm"
+        />
+      </div>
 
+      <button class=" bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white px-6 py-2">
+        Search
+      </button>
 </header>
+
+<!-- MAIN -->
   <main class="mt-6 mb-20 px-4 md:px-8 bg-white">
 <h2>Overview</h2>
-<div class="grid-cols-2 md:flex justify-between gap-6">
 
-<div class=" w-[300px] pr-6 pl-2 bg-[#FFFFFF] rounded-sm">
-  <div class="p-2">
-<h3 class="text-[#21334F]">Total Applicants</h3>
-<p class="font-semibold text-[#2D2F48] text-2xl pt-2">1,230</p>
-</div>
-</div>
+ <!-- Cards Wrapper -->
+  <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
 
-<div class="w-[300px] pr-6 pl-2 bg-[#F7FAEC] rounded-sm">
-  <div class="p-2">
-<h3 >Successful</h3>
-<p class="font-semibold text-[#34A853] text-2xl pt-2">390</p>
-</div>
-</div>
+    <!-- Total Applicants -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4">
+      <p class="text-sm mb-2">
+        Total Applicants
+      </p>
+      <p class="font-semibold text-[#2D2F48] text-2xl">
+        1,230
+      </p>
+    </div>
 
-<div class="w-[300px] pr-6 pl-2 bg-[#E5E5E5] rounded-sm">
-  <div class="p-2">
-<h3 class="text-[#21334F]">Pending</h3>
-<p class="font-semibold text-[#2D2F48] text-2xl">1,230</p>
-</div>
-</div>
+    <!-- Successful -->
+    <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+      <p class="text-sm mb-2">
+        Successful
+      </p>
+      <p class="font-semibold text-[#34A853] text-2xl">
+        390
+      </p>
+    </div>
 
-<div class="w-[300px] pr-6 pl-2 bg-[#FFF3F3] rounded-sm">
-  <div class="p-2">
-<h3 class="text-[#21334F]">Declined</h3>
-<p class="font-semibold text-[#D34444] text-2xl">30</p>
-</div>
-</div>
-</div>
+    <!-- Pending -->
+    <div class="bg-gray-100 border border-gray-200 rounded-lg p-4">
+      <p class="text-sm mb-2">
+        Pending
+      </p>
+      <p class="font-semibold text-[#2D2F48] text-2xl">
+        1,230
+      </p>
+    </div>
 
+    <!-- Declined -->
+    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+      <p class="text-sm mb-2">
+        Declined
+      </p>
+      <p class="font-semibold text-[#D34444] text-2xl">
+        30
+      </p>
+    </div>
 
-<section class="">
+  </div>
+
+<section class="bg-white rounded-sm shadow-sm p-6 mt-14">
 
   <div class="flex justify-between">
-  <h2>Applicants</h2>
+  <h2 class="text-xl font-semibold text-[#2D2F48]">Applicants</h2>
   <p>View All</p>
 </div>
-<table class=""> 
-  <tr class=" ">
-<th>Applicant's Name</th>
-<th>Email address</th>
-<th>Phone Number</th>
-<th>Assessment</th>
-<th>Status</th>
-  </tr>
-</table>
+
+ <!-- Table -->
+  <table class="w-full  border-separate border-spacing-y-2 ">
+    <thead>
+      <tr class="text-[#21334F] text-sm">
+        <th class="py-3 text-left font-semibold">Applicant's Name</th>
+        <th class="py-3 text-left font-semibold">Email address</th>
+        <th class="py-3 text-left font-semibold">Phone Number</th>
+        <th class="py-3 text-left font-semibold">Assessment</th>
+        <th class="py-3 text-left font-semibold">Status</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody class="text-gray">
+
+      <!-- ROW TEMPLATE -->
+      <!-- Row 1 -->
+      <tr class="bg-[#F7F8FA] border-1 border-[#21334F1A]">
+        <td class="py-4">Ifeanyi Umunnakwe</td>
+        <td>ifeanyi@decagon.com</td>
+        <td>09000000000</td>
+        <td>
+          <span class="text-[#34A853] font-medium">Passed</span>
+        </td>
+        <td>
+          <span class="px-4 py-1 text-[] font-medium">
+            Pending
+          </span>
+        </td>
+        <td class="text-gray">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </td>
+      </tr>
+
+      <!-- Row 2 -->
+      <tr class="bg-[#F7F8FA] border-1 border-[#21334F1A]">
+        <td class="py-4">Ifeanyi Umunnakwe</td>
+        <td>ifeanyi@decagon.com</td>
+        <td>09000000000</td>
+        <td>
+          <span class="text-[#D34444] font-medium">Failed</span>
+        </td>
+        <td>
+          <span class="px-4 py-1 text-[#D34444] font-medium">
+            Declined
+          </span>
+        </td>
+        <td class="text-gray">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </td>
+      </tr>
+
+      <!-- Row 3 -->
+      <tr class="bg-[#F7F8FA] border-t border-[]">
+        <td class="py-4">Ifeanyi Umunnakwe</td>
+        <td>ifeanyi@decagon.com</td>
+        <td>09000000000</td>
+        <td>
+          <span class="text-[#34A853] font-medium">Passed</span>
+        </td>
+        <td>
+          <span class="px-4 py-1 text-[#34A853] font-medium">
+            Successful
+          </span>
+        </td>
+        <td class="text-gray">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </td>
+      </tr>
+
+      <!-- Row 4 -->
+      <tr class="bg-[#F7F8FA] border-1 border-[#21334F1A]">
+        <td class="py-4">Ifeanyi Umunnakwe</td>
+        <td>ifeanyi@decagon.com</td>
+        <td>09000000000</td>
+        <td>
+          <span class="text-[#34A853] font-medium">Passed</span>
+        </td>
+        <td>
+          <span class="px-4 py-1 text-[] font-medium">
+            Pending
+          </span>
+        </td>
+        <td class="text-gray">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </td>
+      </tr>
+
+            <!-- Row 5 -->
+      <tr class="bg-[#F7F8FA] border-1 border-[#21334F1A]">
+        <td class="py-4">Ifeanyi Umunnakwe</td>
+        <td>ifeanyi@decagon.com</td>
+        <td>09000000000</td>
+        <td>
+          <span class="text-[#34A853] font-medium">Passed</span>
+        </td>
+        <td>
+          <span class="px-4 py-1 text-[#34A853] font-medium">
+            Successful
+          </span>
+        </td>
+        <td class="text-gray">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </td>
+      </tr>
+
+            <!-- Row 6 -->
+      <tr class="bg-[#F7F8FA] border-1 border-[#21334F1A]">
+        <td class="py-4">Ifeanyi Umunnakwe</td>
+        <td>ifeanyi@decagon.com</td>
+        <td>09000000000</td>
+        <td>
+          <span class="text-[#34A853] font-medium">Passed</span>
+        </td>
+        <td>
+          <span class="px-4 py-1 text-[#34A853] font-medium">
+            Successful
+          </span>
+        </td>
+        <td class="text-gray">
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="flex justify-end mt-6">
+    <button class="pagination-btn px-4 py-2 border-1 border-[#6473821A]">1</button>
+    <button class="pagination-btn px-4 py-2 border-1 border-[#6473821A]">2</button>
+    <button class="pagination-btn px-4 py-2 border-1 border-[#6473821A]">3</button>
+    <button class="pagination-btn px-4 py-2 border-1 border-[#6473821A]">4</button>
+    <button class="pagination-btn px-4 py-2 border-1 border-[#6473821A]">5</button>
+    <button class="pagination-btn px-4 py-2 ml-4 border-1 border-[#6473821A]">
+      <i class="fa-solid fa-chevron-right text-xs"></i>
+    </button>
+  </div>
+
 </section>
 
   </main>
   </div>
+  <script src="overview.js"></script>
 </body>
 </html>

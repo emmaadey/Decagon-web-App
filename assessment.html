@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+</head>
+   <body class="min-h-screen bg-[#FAFAFA] flex flex-col md:flex-row">
+    <!-- SIDEBAR -->
+  <aside id="sidebar" class="fixed top-0 left-0  bg-[#FAFAFA] transform -translate-x-full md:translate-x-0 transition-transform duration-300 px-6 py-8 flex flex-col">
+    <div class="aside_sidebar">
+        <Img src="img files/Logo.png" class="logo" alt="logo"></Img>
+    </div>
+      <!-- LINKS -->
+
+      <div>
+    <h3 class="font-semibold text-lg">Menu</h3>
+  
+    <ul class="mb-8 mt-4 space-y-2">
+        <li class="menu">
+            <a href="overview.html" class="">
+             <button type="button" aria-hidden="true" class="mr-3">
+        <i class="fa-solid fa-table-cells-large"></i>       
+       </button>
+         Dashboard
+            </a>
+        </li>
+
+        <li class="menu">
+            <a href="#applicant" class="">
+            <button type="button" aria-hidden="true" class="mr-3">
+            <i class="fa-solid fa-users"></i>
+        </button>
+        Applicant
+        </a>
+      </li>
+
+        <li class="menu">
+            <a href="#assessment" class="">
+              <button type="button" class="mr-3">
+             <i class="fa-solid fa-id-card"></i>
+            </button>
+            Assesment
+            </a>
+        </li>
+    </ul>
+</div>
+<div>
+       <h3 class="font-semibold text-lg mb-4">Others</h3> 
+       
+        <a href="#settings" class="">
+          <button type="button" aria-hidden="true" class="mr-3">
+          <i class="fa-solid fa-gear"></i>
+          </button>
+            Settings
+        </a>
+       </div>
+
+        <a class="my-20 hover:text-[#34A853] focus:text-[#34A853]" id="refer-openPopup">
+      <span class="mr-3">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>   
+      </span>
+      Logout
+    </a>
+  </aside>
+
+ <!-- MAIN CONTENT -->
+  <div id="main-content" class="flex-1 w-full md:ml-[230px] flex flex-col bg-white">
+    <!-- HEADER -->
+    <header class="flex justify-between text-[#2D2F48] font-semibold items-center border-b border-[#E5E5E5] px-8 py-4">
+       <div class="flex gap-4">
+        <div class="flex items-center gap-4 w-full max-w-xl bg-gray-100 pl-4 pr-12 py-4">
+        <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+        <input
+          type="text"
+          placeholder="Search for accounts, users..."
+          class="bg-transparent outline-none w-full text-sm"
+        />
+      </div>
+
+      <button class=" bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white px-6 py-2">
+        Search
+      </button>
+</div>
+</header>
+<main class="mt-6 mb-20 px-4 md:px-8 bg-white">
+<!-- Top row -->
+      <div class="flex items-center justify-between mb-24">
+        <h1 class="text-xl font-semibold text-[#2D2F48]">
+          Assessment
+        </h1>
+
+        <button id="openPopup" class=" bg-gradient-to-r from-[#B8D344] to-[#34A853] text-white px-6 py-2 rounded">
+          Create Assessment Schedule
+        </button>
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div class="flex flex-col items-center justify-center text-center text-3xl text-gray-400 mt-32">
+        <p class="">
+          No assessment schedule created.
+        </p>
+        <p class="mt-2">
+          Click the button above to create a schedule
+        </p>
+      </div>
+    </main>
+</div>
+
+ <!-- ASSESSMENT POPUP MODAL -->
+<div class=" top-0 left-0  bg-black/50 flex justify-center items-center fixed inset-0 hidden" id="popup">
+  <div class="bg-white shadow-lg p-8 w-[325px] md:w-[900px]">
+    <h2 class="text-xl font-semibold text-[#2D2F48] mb-2">Assessment Scheduler</h2>
+    <p class="text-sm text-[#666666]">Set up the date, time and location for assessments</p>
+    <div class=" grid-cols-1 md:flex justify-between items-center gap-4 my-6">
+              <div class="bg-[#F6F7F9] w-[259px] p-2">
+                <label for="location" class="block text-sm font-bold text-[#2D2F48] tracking-wide mx-1">Location</label>
+                <select id="location" name="location" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select location</option>
+                  <!-- Fill with options -->
+                </select>
+              </div>
+
+              <div class="bg-[#F6F7F9]  w-[259px] p-2">
+                <label for="date" class="block text-sm text-[#2D2F48] font-bold tracking-wide mx-1">Date</label>
+                <select id="date" name="date" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select date</option>
+                  <!-- Fill with options -->
+                </select>
+              </div>
+
+              <div class="bg-[#F6F7F9]  w-[259px] p-2">
+                <label for="time" class="block text-sm text-[#2D2F48] font-bold tracking-wide mx-1">Time</label>
+                <select id="time" name="time" class="w-full bg-transparent text-[#666666] hover:text-[#2D2F48] outline-none pt-2 pr-8 text-sm transition-all">
+                  <option value="">Select time</option>
+                 <option value="">09:00 am - 10:00 am</option>
+                 <option value="">10:00 am - 12:00 pm</option>
+                 <option value="">12:00 pm - 13:00 pm</option>
+                 <option value="">14:00 pm - 15:00 pm</option>
+                </select>
+              </div>
+
+               <div class="bg-[#F6F7F9]  w-[259px] p-2">
+                <label for="capacity" class="block text-sm text-[#2D2F48] font-bold tracking-wide mx-1">Capacity</label>
+                <input id="capacity" name="capacity" type="text" placeholder="Enter capacity" class="w-full bg-transparent outline-none pt-2 text-sm" />
+              </div>
+
+              </div>
+               <div class="flex justify-end gap-6">
+                <button id="closePopup" class="text-[#21334F] font-bold hover:opacity-90">Cancel</button>
+                <button type="button" class="bg-gradient-to-r from-[#34A853] to-[#B8D344] text-white font-medium py-3 px-10 hover:opacity-90 transition-all">
+                  Save
+              </div>
+              
+</div>
+</div>
+
+<script src="assessment.js"></script>
+</body>
+</html>
